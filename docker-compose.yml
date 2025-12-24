@@ -1,0 +1,14 @@
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins_container
+    ports:
+      - "9090:8080"     # host_port : container_port
+    volumes:
+      - "$PWD/jenkins_data:/var/jenkins_home"      # host volume path mapping to the container volume path so all data of contianer saved to the host path.
+    networks:
+      - jenkins_network
+
+networks:
+  jenkins_network:
+    driver: bridge
