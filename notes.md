@@ -46,3 +46,9 @@ Note: Everything that's going to happen in the jenkins job will occur within the
 # Add parameters to the job
 -> Here we can dynamically add the parameters while configuration itself.
    Configuration -> General -> Select "The project is parameterized"-> Add Paramter(string parameter)-> Give name and default value-> Add something into the execution shell(eg: echo $FIRST_NAME $LASTNAME)->save-> Build with parameters-> Here we can use default parameters or we can change the parametrs and build it.
+   ## List parameter( choice parameter)
+      -> Here in the add parameters, we can see "Choice parameter", we can give different list of  
+         options in the "default value" and during build, we can select any option from the list.
+   ## How to use boolean Paramter in scripts
+   -> Boolean parameter is when we tick the "default value", then it is true or else false
+   So we can use this in the scripts like to check some conditions like true to false. Based on the condition, we can show the relevant statements.
